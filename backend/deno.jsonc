@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "start": "deno run --unstable --allow-net --allow-env main.ts",
+    "dev": "deno run --unstable --watch --allow-net --allow-env main.ts",
+    "seed": "deno run --unstable seed.ts"
+  }
+}
