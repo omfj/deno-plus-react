@@ -1,5 +1,5 @@
 {
-  "name": "react-ts-tailwind-template",
+  "name": "web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,14 +10,7 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx}\"",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,md,mjs,cjs}": [
-      "pnpm lint",
-      "pnpm format-check"
-    ]
+    "format:check": "prettier --check \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.19",
@@ -25,7 +18,8 @@
     "prettier-plugin-tailwindcss": "^0.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.14.1"
+    "react-router-dom": "^6.14.1",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.0.2",
@@ -42,8 +36,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.3",
     "postcss": "^8.4.25",
     "prettier": "2.8.8",
     "prettier-plugin-organize-imports": "^3.2.2",

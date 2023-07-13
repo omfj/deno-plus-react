@@ -96,11 +96,17 @@ class Logger {
 
     const { status } = ctx.response;
 
-    console.log(bgBlue("\n" + APP_NAME));
+    const getMs = () => {
+      if (ms < 10) return green(`${ms}ms`);
+      if (ms < 100) return yellow(`${ms}ms`);
+      return red(`${ms}ms`);
+    };
+
+    console.log("\n" + bgBlue(APP_NAME));
     console.log(
-      `${blue(url.pathname)} - ${yellow(method)} - ${cyan(
+      `${blue(url.pathname)} | ${yellow(method)} | ${cyan(
         status.toString()
-      )} - ${red(`${ms}ms`)}`
+      )} | ${getMs()}`
     );
   };
 }
